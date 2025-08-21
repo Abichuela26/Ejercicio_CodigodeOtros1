@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles.css">
-    <title>APIs</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API GitHub</title>
+  <!-- Se corrige la ruta del 'style.css' -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
+
+<!-- Se crea un div para realizar el formulario de consulta -->
+  <div class="wrapper">
+    <h1>Consulta de Usuarios</h1>
+
+    <!-- Se realiza un formulario para probar con cualquier username -->
+    <form id="search-form">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" placeholder="Coloca el username" required>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Se usan las clases .name, .blog y .location que el JS consulta. -->
     <p class="name"></p>
     <p class="blog"></p>
+    <!-- No existía un elemento con clase .location, se agrega para evitar errores. -->
+    <p class="location"></p>
+  </div>
 
-  <script src="../assets/js/app.js"></script>
+  <!-- Se corrige ubicación de  'app.js' y con 'defer' para asegurar que el DOM exista. -->
+  <script src="./assets/js/app.js" defer></script>
 </body>
 </html>
